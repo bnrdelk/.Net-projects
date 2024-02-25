@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QDGMRmA6MWbw/HmJV0A8coD+P/eVDPn7NeDcyce0IM2aiazRCdAemtujIWY+u4Ne4ufhVobTnWHeg5KVLbj44g==",
+  "dgSpecHash": "wjCoiqyg1z5O4snwtYBBV8G6rR4MYrI9Y4j20+bb+tyIA1rcZNdXldL4B6VFHvt+cugf/alVRHvWbAgp6Z6UYA==",
   "success": true,
-  "projectFilePath": "/Users/beyzanurdeliktas/Desktop/dotnet-basics/books-page/books-page.csproj",
+  "projectFilePath": "/Users/beyzanurdeliktas/Desktop/dotnet-projects/books-page/books-page.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

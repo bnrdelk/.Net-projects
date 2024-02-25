@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/beyzanurdeliktas/Desktop/dotnet-basics/books-page/books-page.csproj",
+      "projectUniqueName": "/Users/beyzanurdeliktas/Desktop/dotnet-projects/books-page/books-page.csproj",
       "projectName": "books-page",
-      "projectPath": "/Users/beyzanurdeliktas/Desktop/dotnet-basics/books-page/books-page.csproj",
+      "projectPath": "/Users/beyzanurdeliktas/Desktop/dotnet-projects/books-page/books-page.csproj",
       "packagesPath": "/Users/beyzanurdeliktas/.nuget/packages/",
-      "outputPath": "/Users/beyzanurdeliktas/Desktop/dotnet-basics/books-page/obj/",
+      "outputPath": "/Users/beyzanurdeliktas/Desktop/dotnet-projects/books-page/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/beyzanurdeliktas/.nuget/NuGet/NuGet.Config"

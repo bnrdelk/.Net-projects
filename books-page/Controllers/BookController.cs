@@ -17,6 +17,18 @@ public class BookController : Controller {
         return View(book);
     }
 
+    public IActionResult Details(){
+        var book = new BookViewModel();
+
+        book.Id=1;
+        book.Name="The Elephant Vanishes";
+        book.Author="Haruki Murakami";
+        book.Image="1.jpg";
+        book.Description="With the same deadpan mania and genius for dislocation that he brought to his internationally acclaimed novels A Wild Sheep Chase and Hard-Boiled Wonderland and the End of the World, Haruki Murakami makes this collection of stories a determined assault on the normal. A man sees his favorite elephant vanish into thin air; a newlywed couple suffers attacks of hunger that drive them to hold up a McDonald's in the middle of the night; and a young woman discovers that she has become irresistible to a little green monster who burrows up through her backyard.";
+        
+        return View(book);
+    }
+
      public IActionResult List(){
 
         var BookList = new List<BookViewModel>()
