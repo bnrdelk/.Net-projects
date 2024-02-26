@@ -24,3 +24,5 @@
 /Users/beyzanurdeliktas/Desktop/dotnet-projects/appeal-page/obj/Debug/net8.0/appeal-page.pdb
 /Users/beyzanurdeliktas/Desktop/dotnet-projects/appeal-page/obj/Debug/net8.0/appeal-page.genruntimeconfig.cache
 /Users/beyzanurdeliktas/Desktop/dotnet-projects/appeal-page/obj/Debug/net8.0/ref/appeal-page.dll
+/Users/beyzanurdeliktas/Desktop/dotnet-projects/appeal-page/obj/Debug/net8.0/appeal-page.RazorAssemblyInfo.cache
+/Users/beyzanurdeliktas/Desktop/dotnet-projects/appeal-page/obj/Debug/net8.0/appeal-page.RazorAssemblyInfo.cs

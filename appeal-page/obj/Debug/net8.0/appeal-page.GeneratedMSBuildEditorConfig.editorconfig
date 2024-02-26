@@ -17,3 +17,31 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = /Users/beyzanurdeliktas/Desktop/dotnet-projects/appeal-page
 build_property._RazorSourceGeneratorDebug = 
+
+[/Users/beyzanurdeliktas/Desktop/dotnet-projects/appeal-page/Views/Application/Apply.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwbGljYXRpb24vQXBwbHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/beyzanurdeliktas/Desktop/dotnet-projects/appeal-page/Views/Application/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwbGljYXRpb24vSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/beyzanurdeliktas/Desktop/dotnet-projects/appeal-page/Views/Application/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwbGljYXRpb24vTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/beyzanurdeliktas/Desktop/dotnet-projects/appeal-page/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/beyzanurdeliktas/Desktop/dotnet-projects/appeal-page/Views/Shared/_MainLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19NYWluTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/beyzanurdeliktas/Desktop/dotnet-projects/appeal-page/Views/Shared/_WelcomeLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19XZWxjb21lTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/beyzanurdeliktas/Desktop/dotnet-projects/appeal-page/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
