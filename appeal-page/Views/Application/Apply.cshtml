@@ -4,7 +4,8 @@
     Layout = "_MainLayout";
 }
 <h1>Application Form</h1>
-<form method="post" action="/application/apply">
+<form method="post" action="/application/apply" nonvalidate>
+    <div asp-validation-summary="All"></div>
     <div class="mb-3">
         <label asp-for="Name" class="form-label">Name</label>
         <input asp-for="Name" id="form-control">
@@ -20,6 +21,7 @@
     <div class="mb-3">
         <label asp-for="IsAttending" class="form-label">Will you participate in the program?</label>
        <select asp-for="IsAttending" id="IsAttending">
+        <option value="">Choose..</option>
         <option value="true">Yes, I will.</option>
         <option value="false">No, I wont.</option>
        </select>

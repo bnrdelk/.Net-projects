@@ -14,9 +14,16 @@ namespace appeal_page.Controllers
         [HttpPost]
          public IActionResult Apply(FormInfo model)
         {
-            Repository.CreateUser(model);
-            ViewBag.UserCount = Repository.Users.Where(u => u.IsAttending == true ).Count();
-            return View("Thanks", model);
+
+            if(ModelState.IsValid)
+            {
+                Repository.CreateUser(model);
+                ViewBag.UserCount = Repository.Users.Where(u => u.IsAttending == true ).Count();
+                return View("Thanks", model);
+            } else 
+            {
+                return View(model);
+            }
         }
 
         [HttpGet]
