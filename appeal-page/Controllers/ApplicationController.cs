@@ -1,24 +1,35 @@
 using Microsoft.AspNetCore.Mvc;
+using appeal_page.Models;
 
 namespace appeal_page.Controllers
 {
     public class ApplicationController : Controller
     {
-        // localhost/application
-        // localhost/application/index
-        public IActionResult Index()
-        {
-            return View();
-        }
-
+        [HttpGet]
          public IActionResult Apply()
         {
             return View();
         }
 
+        [HttpPost]
+         public IActionResult Apply(FormInfo model)
+        {
+            Repository.CreateUser(model);
+            ViewBag.UserCount = Repository.Users.Where(u => u.IsAttending == true ).Count();
+            return View("Thanks", model);
+        }
+
+        [HttpGet]
          public IActionResult List()
         {
-            return View();
+            return View(Repository.Users);
+        }
+
+        // application/details/{id}
+        [HttpGet]
+         public IActionResult Details(int id)
+        {
+            return View(Repository.GetById(id));
         }
     }
 }

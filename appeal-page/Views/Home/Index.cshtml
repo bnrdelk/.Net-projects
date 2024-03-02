@@ -1,8 +1,18 @@
+@model Info;
 @{
     ViewBag.Title = "Welcome";
     Layout = "_WelcomeLayout";
 }
-<!--<h1>@ViewData["Greeting"] @ViewData["Greeting"]</h1> -->
-<h1>@ViewBag.Greeting @ViewBag.UserName</h1>
+<!--<h1>@ViewData["Greeting"]]</h1> -->
+<h1>@ViewBag.Greeting</h1>
 <h5>You can make your application below.</h5>
+
+<div class="card m-3">
+    <ul class="list-group ">
+        <li class="list-group-item">In @Model.Location</li>
+        <li class="list-group-item">on @Model.Date.ToString("dd/MM/yyyy HH.mm")</li>
+        <li class="list-group-item">with @Model.NumberOfPeople participants</li>
+    </ul>
+</div>
+
 <a class="btn btn-sm btn-outline-success" href="/application/apply">Make an application</a>

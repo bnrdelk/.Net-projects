@@ -1,3 +1,4 @@
+@model List<FormInfo>
 @{
     ViewBag.Title = "List";
     Layout = "_MainLayout";
@@ -10,10 +11,7 @@
                 Name
             </td>
             <td>
-                Surname
-            </td>
-            <td>
-                KAtılım durumu
+                Attending
             </td>
             <td>
                 
@@ -21,33 +19,37 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>
-                Beyza Nur
-            </td>
-            <td>
-                D.
-            </td>
-            <td>
-                Evet
-            </td>
-            <td>
-                <a class="btn btn-sm btn-success" href="#"> Info </a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Beyza Nur2
-            </td>
-            <td>
-                D.2
-            </td>
-            <td>
-                Evet
-            </td>
-            <td>
-                <a class="btn btn-sm btn-success" href="#"> Info </a>
-            </td>
-        </tr>
+
+        @{ int count = 0; }
+
+        @foreach(var user in Model)
+        {
+            var status = user.IsAttending ? "Yes" : "No";
+            var tableClass = user.IsAttending ? "table-success" : "table-danger";
+
+            if(user.IsAttending)
+            {
+                count++;
+            }
+
+            <tr class="@tableClass">
+                <td>
+                    @user.Name
+                </td>
+                <td>
+                    @status
+                </td>
+                <td>
+                    <a class="btn btn-sm btn-success" href="/application/details/@user.Id"> Info </a>
+                </td>
+            </tr>
+        }
+
     </tbody>
 </table>
+
+<div class="card">
+    <div class="card-body">
+        <p>Current Number of Participants: @count</p>
+    </div>
+</div>

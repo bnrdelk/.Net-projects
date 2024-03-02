@@ -1,0 +1,27 @@
+@Model FormInfo
+@{
+    ViewBag.Title = "Detail";
+    Layout = "_MainLayout";
+}
+@{
+    var btnClass = @Model.IsAttending ? "success" : "danger";
+}
+
+<h1>@Model.Name's Application Details</h1>
+    <span class="badge text-bg-@btnClass"> 
+        @if(Model.IsAttending == true)
+        {
+            <text>Attending</text>
+        } else
+        {
+            <text>Not Attending</text>
+        }     
+    </span>
+
+ <ul class="list-group m-3">
+    <li class="list-group-item">Name: @Model.Name</li>
+    <li class="list-group-item">Phone: @Model.Phone</li>
+    <li class="list-group-item">Mail: @Model.Mail</li>
+</ul>   
+
+<a asp-controller="Application" asp-action="List" class="btn btn-outline-@btnClass">Participants List</a>

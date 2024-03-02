@@ -1,0 +1,17 @@
+@model FormInfo
+@{
+    ViewBag.Title = "About";
+    Layout = "_MainLayout";
+}
+
+<h1>About Applications</h1>
+@if(Model.IsAttending)
+{
+    <h5>There are @ViewBag.UserCount people who applied.</h5>
+    <a class="btn btn-sm btn-outline-primary" href="/application/list"> List participans </a>
+} else
+{
+    <h5>@Model.Name, sorry to hear that. If you change your mind,</h5>
+    <a class="btn btn-sm btn-outline-primary" href="/application/apply"> Apply </a>
+    
+}
