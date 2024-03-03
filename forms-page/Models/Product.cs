@@ -12,9 +12,9 @@ namespace forms_page.Models
         public decimal Price { get; set; }
          [Display(Name="Product Image")]
         public string Image { get; set; } = string.Empty;
-         [Display(Name="In Stock")]
+        
         public bool IsInStock { get; set; }
-         [Display(Name="Category Id")]
+
         public int CategoryId { get; set; } //foreign key
 
 

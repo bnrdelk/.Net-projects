@@ -1,29 +1,47 @@
-﻿@model IEnumerable<Product>
+﻿@model ProductViewModel
 @{
     ViewData["Title"] = "Home Page";
 }
 
+<div class="card card-body my-3">
+    <form asp-action="Index" class="form">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-11">
+                <select name="category" class="form-select" asp-items="@(new SelectList(Model.Categories, "CategoryId", "Name", Model.SelectedCategory))"> <!--for having url, name added -> /?category=1-->
+                    <option value="0">Select All</option> <!--For default option-->
+                </select>
+            </div>
+            <div class="col-md-1">
+                <button type="submit" class="btn btn-primary">Filter</button>
+            </div>
+        </div>
+    </div>
+    </form>
+</div>
+
 <table class="table table-bordered table-info table-striped">
-    <thead>
+    <thead style="text-align: center;">
         <tr>
-            <th> @Html.DisplayNameFor(p => p.ProductId) </th>
-            <th> @Html.DisplayNameFor(p => p.Image) </th>
-            <th> @Html.DisplayNameFor(p => p.Name) </th>
-            <th> @Html.DisplayNameFor(p => p.Price) </th>
-            <th>  </th>
+            
+            <th style="width: 100pt; "> @Html.DisplayNameFor(p => p.Products[0].ProductId) </th>
+            <th style="width: 100pt;"> @Html.DisplayNameFor(p => p.Products[0].Image) </th>
+            <th> @Html.DisplayNameFor(p => p.Products[0].Name) </th>
+            <th style="width: 100pt;"> @Html.DisplayNameFor(p => p.Products[0].Price) </th>
+            <th style="width: 100pt;">  </th>
         </tr>
     </thead>
     <tbody>
-        @foreach(var p in @Model)
+        @foreach(var p in @Model.Products)
         {
             <tr>
-                <td> @p.ProductId </td>
+                <td style="text-align: center;"> @p.ProductId </td>
                 <td>
                     <img src="~/img/@p.Image" class="p-2" height="200pt" width="150pt" >
                 </td>
                 <td> @p.Name </td>
-                <td> @p.Price </td>
-                <td>
+                <td style="text-align: center;"> @p.Price </td>
+                <td style="text-align: center;">
                     <a href="" class="btn btn-sm btn-outline-info">Edit</a>
                     <a href="" class="btn btn-sm btn-outline-danger">Delete</a>
                 </td>
