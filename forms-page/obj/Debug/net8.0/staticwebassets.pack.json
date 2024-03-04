@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets/img/3.jpg"
     },
     {
+      "Id": "/Users/beyzanurdeliktas/Desktop/dotnet-projects/forms-page/wwwroot/img/5540561c-70ea-4b74-8309-1dfa8afc4bd2.jpg",
+      "PackagePath": "staticwebassets/img/5540561c-70ea-4b74-8309-1dfa8afc4bd2.jpg"
+    },
+    {
       "Id": "/Users/beyzanurdeliktas/Desktop/dotnet-projects/forms-page/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },

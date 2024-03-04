@@ -6,15 +6,25 @@ namespace forms_page.Models
     {
         [Display(Name="Product Id")]
         public int ProductId { get; set; }
-         [Display(Name="Product Name")]
+
+        [Required]
+        [StringLength(30)]
+        [Display(Name="Product Name")]
         public string Name { get; set; } = string.Empty; // same with string? - nullable 
-         [Display(Name="Price")]
-        public decimal Price { get; set; }
-         [Display(Name="Product Image")]
-        public string Image { get; set; } = string.Empty;
+
+        [Required]
+        [Range(1,1000)]
+        [Display(Name="Price")]
+        public decimal? Price { get; set; } // [Required] annotation 
+
+        [Display(Name="Image")]
+        public string? Image { get; set; } = string.Empty;
         
+        [Display(Name="Is Product In Stock")]
         public bool IsInStock { get; set; }
 
+        [Required]
+        [Display(Name="Category")]
         public int CategoryId { get; set; } //foreign key
 
 

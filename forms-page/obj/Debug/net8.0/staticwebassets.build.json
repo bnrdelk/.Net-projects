@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ckTfi+nFzv0HvF9SXRS5buF6o6RtIvVNueH/DL6naPA=",
+  "Hash": "2S4oLduJY2OBaxn5j9n3GGoQ/yZnjVjQGdSNfRy+PNE=",
   "Source": "forms-page",
   "BasePath": "_content/forms-page",
   "Mode": "Default",
@@ -148,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/3.jpg"
+    },
+    {
+      "Identity": "/Users/beyzanurdeliktas/Desktop/dotnet-projects/forms-page/wwwroot/img/5540561c-70ea-4b74-8309-1dfa8afc4bd2.jpg",
+      "SourceId": "forms-page",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/beyzanurdeliktas/Desktop/dotnet-projects/forms-page/wwwroot/",
+      "BasePath": "_content/forms-page",
+      "RelativePath": "img/5540561c-70ea-4b74-8309-1dfa8afc4bd2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/5540561c-70ea-4b74-8309-1dfa8afc4bd2.jpg"
     },
     {
       "Identity": "/Users/beyzanurdeliktas/Desktop/dotnet-projects/forms-page/wwwroot/js/site.js",

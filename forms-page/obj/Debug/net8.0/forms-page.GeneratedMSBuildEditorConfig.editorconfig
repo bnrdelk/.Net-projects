@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/beyzanurdeliktas/Desktop/dotnet-projects/forms-page
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/beyzanurdeliktas/Desktop/dotnet-projects/forms-page/Views/Home/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/beyzanurdeliktas/Desktop/dotnet-projects/forms-page/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -33,6 +33,10 @@ namespace forms_page.Models
             }
         }
 
+        public static void CreateProduct(Product newProduct)
+        {
+            _products.Add(newProduct);
+        }
 
     }
 }

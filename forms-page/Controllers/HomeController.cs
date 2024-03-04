@@ -42,9 +42,46 @@ public class HomeController : Controller
         return View(model);
     }
 
-    public IActionResult Privacy()
+    [HttpGet]
+    public IActionResult Create()
     {
+        ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name");
         return View();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Create(Product model, IFormFile imageFile)
+    {
+        var allowedExtensions = new[] {".jpg",".jpeg",".png"};
+
+        var extension = Path.GetExtension(imageFile.FileName); //x.jpg ->> gets .jpg
+        var randomFileName = string.Format($"{Guid.NewGuid().ToString()}{extension}"); // unique name for file, because if the filenames are same, old one will be override w new
+
+        var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", randomFileName);
+
+        if(imageFile != null) { 
+            if(!allowedExtensions.Contains(extension)) 
+            {
+                ModelState.AddModelError("", "Upload a valid file. (Allowed extensions: .jpg, .jpeg, .png)");
+            }
+        }
+
+        if(ModelState.IsValid)
+        {
+            using(var stream = new FileStream(path, FileMode.Create)) // stream bilgisi structın içinde, böylece file bellekten kapsam dışına çıkıldığında kaybolacak.
+            {
+                await imageFile.CopyToAsync(stream);
+            }
+
+            model.Image = randomFileName;
+            model.ProductId = Repository.Products.Count + 1;
+            Repository.CreateProduct(model);
+            // return View(); --> denilmesi, formu yenileyerek tekrar önümüze getirir. post'tan (kayıttan) sonra bunu gerçeklştirmeye gerek yok.
+            return RedirectToAction("Index"); // Home sayfasına yönlendiriyoruz
+        }
+
+        ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name"); // SelectList'e tekrar verinin düşmesi gerek. 
+        return View(model); // If not valid, just show the create form with old model values.
     }
 
 }
