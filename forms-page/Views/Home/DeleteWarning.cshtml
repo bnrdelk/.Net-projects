@@ -1,0 +1,12 @@
+@model Product
+
+<div>
+    <p>
+        Do you reaaaally want to delete @Model.Name?
+        <form  method="post">
+            <input type="hidden" asp-for="@Model.ProductId"> <!-- asp-for !!-->
+            <button type="submit" class="btn btn-danger">Yes, I doooo</button>
+            <a href="/" class="btn btn-outline-success">No, I doooooon't</a>
+        </form>
+    </p>
+</div>

@@ -68,20 +68,96 @@ public class HomeController : Controller
 
         if(ModelState.IsValid)
         {
-            using(var stream = new FileStream(path, FileMode.Create)) // stream bilgisi structın içinde, böylece file bellekten kapsam dışına çıkıldığında kaybolacak.
+            if(imageFile != null) 
             {
-                await imageFile.CopyToAsync(stream);
-            }
+                using(var stream = new FileStream(path, FileMode.Create)) // stream bilgisi structın içinde, böylece file bellekten kapsam dışına çıkıldığında kaybolacak.
+                {
+                    await imageFile.CopyToAsync(stream);
+                }
 
-            model.Image = randomFileName;
-            model.ProductId = Repository.Products.Count + 1;
-            Repository.CreateProduct(model);
-            // return View(); --> denilmesi, formu yenileyerek tekrar önümüze getirir. post'tan (kayıttan) sonra bunu gerçeklştirmeye gerek yok.
-            return RedirectToAction("Index"); // Home sayfasına yönlendiriyoruz
+                model.Image = randomFileName;
+                model.ProductId = Repository.Products.Count + 1;
+                Repository.CreateProduct(model);
+                // return View(); --> denilmesi, formu yenileyerek tekrar önümüze getirir. post'tan (kayıttan) sonra bunu gerçeklştirmeye gerek yok.
+                return RedirectToAction("Index"); // Home sayfasına yönlendiriyoruz
+            }
         }
 
         ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name"); // SelectList'e tekrar verinin düşmesi gerek. 
         return View(model); // If not valid, just show the create form with old model values.
     }
 
+    public IActionResult Edit(int? id)
+    {
+        if(id == null)
+            return NotFound(); // 404 page
+
+        var entity = Repository.Products.FirstOrDefault(p => p.ProductId == id);
+
+        if(entity == null)
+            return NotFound(); // 404 page
+
+        ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name");
+        return View(entity);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Edit(int id, Product model, IFormFile? imageFile)
+    {
+        if(id != model.ProductId) // modelden gelen ve url'den gelen id aynı olmalı
+        {
+            return NotFound();
+        }
+
+        if(ModelState.IsValid) // validation control
+        {
+            if(imageFile != null) { 
+                 var extension = Path.GetExtension(imageFile.FileName); //x.jpg ->> gets .jpg
+                 var randomFileName = string.Format($"{Guid.NewGuid().ToString()}{extension}"); // unique name for file, because if the filenames are same, old one will be override w new
+                 var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", randomFileName);
+
+                using(var stream = new FileStream(path, FileMode.Create)) // stream bilgisi structın içinde, böylece file bellekten kapsam dışına çıkıldığında kaybolacak.
+                {
+                    await imageFile.CopyToAsync(stream);
+                }
+
+                model.Image = randomFileName;
+            }
+            Repository.EditProduct(model);
+            return RedirectToAction("Index");
+        }
+
+    ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name");
+    return View(model);
+    }
+
+    [HttpGet]
+    public IActionResult Delete(int? id)
+    {
+        if(id == null)
+            return NotFound(); // 404 page
+
+        var entity = Repository.Products.FirstOrDefault(p => p.ProductId == id);
+
+        if(entity == null)
+            return NotFound(); // 404 page
+
+       
+        return View("DeleteWarning", entity);
+    }
+
+    [HttpPost]
+    public IActionResult Delete(int id, int ProductId) // !! ProductId ayrı olarak formdan alıyorum, kontrol etmek için
+    {
+        if(id != ProductId) // eşit mi değil mi, doğru ürün mü
+            return NotFound(); 
+
+        var entity = Repository.Products.FirstOrDefault(p => p.ProductId == id);
+
+        if(entity == null)
+            return NotFound(); 
+
+        Repository.DeleteProduct(entity);
+        return RedirectToAction("Index");
+    }
 }

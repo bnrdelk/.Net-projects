@@ -17,6 +17,7 @@ namespace forms_page.Models
         [Display(Name="Price")]
         public decimal? Price { get; set; } // [Required] annotation 
 
+        [Required]
         [Display(Name="Image")]
         public string? Image { get; set; } = string.Empty;
         

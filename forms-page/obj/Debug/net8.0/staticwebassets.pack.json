@@ -17,8 +17,16 @@
       "PackagePath": "staticwebassets/img/1.jpg"
     },
     {
+      "Id": "/Users/beyzanurdeliktas/Desktop/dotnet-projects/forms-page/wwwroot/img/17b8c766-6da6-4cc4-b965-6df9dbc47ffc.jpg",
+      "PackagePath": "staticwebassets/img/17b8c766-6da6-4cc4-b965-6df9dbc47ffc.jpg"
+    },
+    {
       "Id": "/Users/beyzanurdeliktas/Desktop/dotnet-projects/forms-page/wwwroot/img/2.jpg",
       "PackagePath": "staticwebassets/img/2.jpg"
+    },
+    {
+      "Id": "/Users/beyzanurdeliktas/Desktop/dotnet-projects/forms-page/wwwroot/img/21273ede-0730-4fa0-8930-0c37b8a7c735.jpg",
+      "PackagePath": "staticwebassets/img/21273ede-0730-4fa0-8930-0c37b8a7c735.jpg"
     },
     {
       "Id": "/Users/beyzanurdeliktas/Desktop/dotnet-projects/forms-page/wwwroot/img/3.jpg",
@@ -27,6 +35,18 @@
     {
       "Id": "/Users/beyzanurdeliktas/Desktop/dotnet-projects/forms-page/wwwroot/img/5540561c-70ea-4b74-8309-1dfa8afc4bd2.jpg",
       "PackagePath": "staticwebassets/img/5540561c-70ea-4b74-8309-1dfa8afc4bd2.jpg"
+    },
+    {
+      "Id": "/Users/beyzanurdeliktas/Desktop/dotnet-projects/forms-page/wwwroot/img/9db0ce6a-6399-46ed-89df-bfacd2ffc918.png",
+      "PackagePath": "staticwebassets/img/9db0ce6a-6399-46ed-89df-bfacd2ffc918.png"
+    },
+    {
+      "Id": "/Users/beyzanurdeliktas/Desktop/dotnet-projects/forms-page/wwwroot/img/ca960824-7c2d-482f-b68b-0f143e790aa7.jpg",
+      "PackagePath": "staticwebassets/img/ca960824-7c2d-482f-b68b-0f143e790aa7.jpg"
+    },
+    {
+      "Id": "/Users/beyzanurdeliktas/Desktop/dotnet-projects/forms-page/wwwroot/img/e250116c-1e4a-4535-913b-0ff154abe2fd.jpg",
+      "PackagePath": "staticwebassets/img/e250116c-1e4a-4535-913b-0ff154abe2fd.jpg"
     },
     {
       "Id": "/Users/beyzanurdeliktas/Desktop/dotnet-projects/forms-page/wwwroot/js/site.js",
