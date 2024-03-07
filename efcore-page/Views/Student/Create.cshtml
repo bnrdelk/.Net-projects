@@ -1,0 +1,26 @@
+﻿@model Student
+
+@{
+    ViewData["Title"] = "Öğrenci Kaydı";
+}
+<h2 class="p-3" style="text-align: center; color: rgb(102, 186, 88);">Kayıt Oluştur</h2>
+<form asp-controller="Student" asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="StudentName" class="form-label">İsim</label>
+        <input asp-for="StudentName" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="StudentSurname" class="form-label">Soyisim</label>
+        <input asp-for="StudentSurname" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label">E-mail</label>
+        <input asp-for="Email" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Phone" class="form-label">Telefon Numarası</label>
+        <input asp-for="Phone" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-outline-success">Öğrenci Kaydı Oluştur</button>
+</form>

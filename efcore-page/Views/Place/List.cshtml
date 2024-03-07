@@ -1,0 +1,32 @@
+@model IEnumerable<InternshipPlace>
+
+@{
+    ViewData["Ttle"] = "Staj Yeri Listesi";
+}
+
+<h2 class="p-3" style="text-align: center; color: rgb(76, 169, 171);">Staj Yeri Listesi</h2>
+<button class="btn btn-outline-success mb-3">
+    <a href="/Place/Create" class="text-dark">Staj Yeri Oluştur</a>
+</button>
+<table class="tabel">
+    <thead>
+        <tr>
+            <th style="width: 350pt;">@Html.DisplayNameFor(p => p.Title)</th>
+            <th style="width: 650pt;">@Html.DisplayNameFor(p => p.Address)</th>
+            <th style="width: 150pt;"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var p in Model)
+        {
+            <tr>
+                <th>@Html.DisplayFor(place => p.Title)</th>
+                <th>@Html.DisplayFor(place => p.Address)</th>
+                <td>
+                    <a asp-controller="Place" asp-action="Edit" asp-route-id="@p.InternshipPlaceId" class="btn btn-sm btn-info">Düzenle</a>
+                    <a asp-controller="Place" asp-action="Delete" class="btn btn-sm btn-danger" asp-route-id="@p.InternshipPlaceId" >Kayıt Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

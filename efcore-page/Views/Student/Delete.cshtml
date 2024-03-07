@@ -1,0 +1,13 @@
+@model Student
+@{
+    ViewData["Title"] = "Öğrenci Kaydı Silme";
+}
+
+<p>
+    <b> @Model.StudentName @Model.StudentName</b> isimli öğrenciyi silmek istiyor musunuz?
+</p>
+<form asp-controller="Student" asp-action="Delete" method="post">
+    <input type="hidden" asp-for="@Model.StudentId" name="id">
+    <button type="submit" class="btn btn-outline-success">Evet, silinsin</button>
+    <a asp-action="List" class="btn btn-outline-info">Hayır, silinmesin</a>
+</form>

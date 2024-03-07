@@ -1,0 +1,27 @@
+@model IEnumerable<Student>
+
+<h2 class="p-3" style="text-align: center; color: rgb(76, 169, 171);">Öğrenci Listesi</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th style="width: 150pt;">@Html.DisplayNameFor(m => m.StudentId)</th>
+            <th style="width: 150pt;">@Html.DisplayNameFor(m => m.StudentName)</th>
+            <th style="width: 150pt;">@Html.DisplayNameFor(m => m.StudentSurname)</th>
+            <th style="width: 100pt;"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var stu in Model)
+        {
+            <tr>
+                <th>@Html.DisplayFor(m => stu.StudentId)</th>
+                <th>@Html.DisplayFor(m => stu.StudentName)</th>
+                <th>@Html.DisplayFor(m => stu.StudentSurname)</th>
+                <td>
+                    <a asp-controller="Student" asp-action="Edit" asp-route-id="@stu.StudentId" class="btn btn-sm btn-info">Düzenle</a>
+                    <a asp-controller="Student" asp-action="Delete" class="btn btn-sm btn-danger" asp-route-id="@stu.StudentId" >Kayıt Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

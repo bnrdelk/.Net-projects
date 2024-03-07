@@ -7,5 +7,7 @@ namespace efcore_page.Data
         public int InternshipPlaceId { get; set; }
 
         public string? Title { get; set; }
+
+        public string? Address { get; set; }
     }
 }

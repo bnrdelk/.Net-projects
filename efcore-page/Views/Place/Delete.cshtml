@@ -1,0 +1,13 @@
+@model InternshipPlace
+@{
+    ViewData["Title"] = "Staj Yeri Silme";
+}
+
+<p>
+    <b> @Model.Title </b> isimli staj yerini silmek istiyor musunuz?
+</p>
+<form asp-controller="Place" asp-action="Delete" method="post">
+    <input type="hidden" asp-for="@Model.InternshipPlaceId" name="id">
+    <button type="submit" class="btn btn-outline-success">Evet, silinsin</button>
+    <a asp-action="List" class="btn btn-outline-info">Hayır, silinmesin</a>
+</form>

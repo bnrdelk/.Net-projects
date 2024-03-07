@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("efcore-page")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a1e008990289eeb7c733f09f21ca2a64af23463")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91892280b06c81e72663b2eee3e1d2a92c561f0f")]
 [assembly: System.Reflection.AssemblyProductAttribute("efcore-page")]
 [assembly: System.Reflection.AssemblyTitleAttribute("efcore-page")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
