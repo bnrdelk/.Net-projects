@@ -26,7 +26,7 @@ namespace efcorepage.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Records",
+                name: "Registers",
                 columns: table => new
                 {
                     RecordId = table.Column<int>(type: "INTEGER", nullable: false)
@@ -37,7 +37,7 @@ namespace efcorepage.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Records", x => x.RecordId);
+                    table.PrimaryKey("PK_Registers", x => x.RecordId);
                 });
 
             migrationBuilder.CreateTable(
@@ -64,7 +64,7 @@ namespace efcorepage.Migrations
                 name: "Places");
 
             migrationBuilder.DropTable(
-                name: "Records");
+                name: "Registers");
 
             migrationBuilder.DropTable(
                 name: "Students");

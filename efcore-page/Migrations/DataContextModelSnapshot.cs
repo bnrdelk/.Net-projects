@@ -34,7 +34,7 @@ namespace efcorepage.Migrations
                     b.ToTable("Places");
                 });
 
-            modelBuilder.Entity("efcore_page.Data.InternshipRecord", b =>
+            modelBuilder.Entity("efcore_page.Data.InternshipRegister", b =>
                 {
                     b.Property<int>("RecordId")
                         .ValueGeneratedOnAdd()
@@ -51,7 +51,7 @@ namespace efcorepage.Migrations
 
                     b.HasKey("RecordId");
 
-                    b.ToTable("Records");
+                    b.ToTable("Registers");
                 });
 
             modelBuilder.Entity("efcore_page.Data.Student", b =>

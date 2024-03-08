@@ -1,0 +1,22 @@
+@model InternshipRegister
+
+@{
+    ViewData["Title"] = "Staj Kaydı Oluştur";
+}
+
+<form asp-action="Create" asp-controller="Register" method="post">
+    <div class="mb-3">
+        <label asp-for="StudentId" class="form-label">Öğrenci İsmi</label>
+        <select asp-for="StudentId" asp-items="ViewBag.Students" class="form-control"> 
+             <option value="">Seçiniz</option> 
+        </select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="InternshipPlaceId" class="form-label">Staj Yeri</label>
+        <select asp-for="InternshipPlaceId" asp-items="ViewBag.Places" class="form-control">
+             <option value="">Seçiniz</option> 
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-outline-success">Kayıt Oluştur</button>
+</form>

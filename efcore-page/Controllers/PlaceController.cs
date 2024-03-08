@@ -87,9 +87,10 @@ namespace efcore_page.Controllers
         [HttpGet]
         public async Task<IActionResult> Delete(int? id)
         {
-if(id==null)
-return NotFound();
-           return View(await _context.Places.FindAsync(id));
+            if(id==null)
+                return NotFound();
+        
+             return View(await _context.Places.FindAsync(id));
         }
 
         [HttpPost]

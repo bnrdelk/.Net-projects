@@ -11,6 +11,12 @@ namespace efcore_page.Data
 
         public string? StudentName { get; set; }
 
+        public string? StudentFullName { 
+            get{
+                return this.StudentName + " " + this.StudentSurname;
+            }
+        }
+
         public string? StudentSurname { get; set; }
 
         public string? Email { get; set; }

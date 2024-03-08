@@ -11,7 +11,7 @@ namespace efcore_page.Data
         
         public DbSet<InternshipPlace> Places => Set<InternshipPlace>(); 
         public DbSet<Student> Students => Set<Student>(); 
-        public DbSet<InternshipRecord> Records => Set<InternshipRecord>(); 
+        public DbSet<InternshipRegister> Registers => Set<InternshipRegister>(); 
 
         // database-first: varolan db'i aktarmak
         // code-first: entity tanımlanır, dbcontext tanımlanır, db oluşturulunur(sqlite) - connection strings ile server'a aktarılcak
